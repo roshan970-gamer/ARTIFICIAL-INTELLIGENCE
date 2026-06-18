@@ -1,0 +1,21 @@
+graph = {
+    'A': [('B',1), ('C',3)],
+    'B': [('G',4)],
+    'C': [('G',2)],
+    'G': []
+}
+
+h = {'A':5, 'B':2, 'C':1, 'G':0}
+
+open = [('A', 0)]
+
+while open:
+    node, cost = open.pop(0)
+
+    if node == 'G':
+        print("Goal Reached")
+        break
+
+    for n, w in graph[node]:
+        f = cost + w + h[n]
+        open.append((n, f))
