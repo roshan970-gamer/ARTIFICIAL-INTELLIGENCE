@@ -1,0 +1,5 @@
+jug1 = 0
+jug2 = 3
+
+jug1 = jug2
+jug2 = 0
